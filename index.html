@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COU Carrom Championship 2026</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block !important; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
+
+    <header class="bg-slate-900 text-white shadow-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <div class="bg-amber-500 text-slate-900 p-2 rounded-lg font-bold tracking-wider text-sm shadow">
+                    COU '26
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold tracking-tight">Carrom Championship</h1>
+                    <p class="text-xs text-slate-400">Centralized Operations Unit</p>
+                </div>
+            </div>
+            <nav class="flex gap-1 bg-slate-800 p-1 rounded-lg">
+                <button onclick="switchTab('home')" id="nav-home" class="nav-btn px-4 py-2 rounded-md text-sm font-semibold transition-all duration-200 bg-amber-500 text-slate-900 shadow cursor-pointer">Home</button>
+                <button onclick="switchTab('register')" id="nav-register" class="nav-btn px-4 py-2 rounded-md text-sm font-semibold transition-all duration-200 text-slate-300 hover:text-white cursor-pointer">Register Team</button>
+                <button onclick="switchTab('schedule')" id="nav-schedule" class="nav-btn px-4 py-2 rounded-md text-sm font-semibold transition-all duration-200 text-slate-300 hover:text-white cursor-pointer">Schedule</button>
+                <button onclick="switchTab('rules')" id="nav-rules" class="nav-btn px-4 py-2 rounded-md text-sm font-semibold transition-all duration-200 text-slate-300 hover:text-white cursor-pointer">Rules</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-6xl w-full mx-auto px-4 py-8">
+
+        <section id="tab-home" class="tab-content active space-y-8">
+            <div class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-2xl p-8 md:p-12 text-center text-white relative overflow-hidden shadow-lg border border-slate-700/50">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-amber-500/10 via-transparent to-transparent"></div>
+                <span class="inline-block bg-amber-500/20 text-amber-400 font-semibold px-4 py-1.5 rounded-full text-xs uppercase tracking-widest mb-4 border border-amber-500/30">COU Annual Carrom Tournament.</span>
+                <h2 class="text-3xl md:text-5xl font-bold tracking-tight mb-4">Precision. Strategy. Glory.</h2>
+                <p class="text-slate-300 max-w-xl mx-auto text-sm md:text-base leading-relaxed mb-8">
+                    Official portal for the COU Carrom Championship 2026. A hybrid League-to-Knockout model designed to crown the ultimate department trio.
+                </p>
+                <button onclick="switchTab('register'); return false;" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-8 py-3.5 rounded-xl transition shadow-lg inline-flex items-center gap-2 cursor-pointer relative z-40">
+                    Register Your Team
+                </button>
+            </div>
+
+            <div class="grid sm:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 flex flex-col justify-between">
+                    <span class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Tournament Timeline</span>
+                    <p class="text-xl font-bold text-slate-900">June 2026</p>
+                    <p class="text-xs text-slate-500 mt-1">Schedules managed dynamically post-draw</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 flex flex-col justify-between">
+                    <span class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">The Arena</span>
+                    <p class="text-xl font-bold text-slate-900 text-sm sm:text-base md:text-xl">Main Street Building Lunch Room</p>
+                    <p class="text-xs text-slate-500 mt-1">Tournament-grade leveled boards</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 flex flex-col justify-between">
+                    <span class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Tournament Scale</span>
+                    <p class="text-xl font-bold text-amber-600">19 Matches Total</p>
+                    <p class="text-xs text-slate-500 mt-1">12 Group Ties + 7 Knockout Rounds</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab-register" class="tab-content space-y-6">
+            <div class="max-w-3xl mx-auto bg-white p-4 rounded-xl shadow-sm border border-slate-100 flex flex-col items-center">
+                <iframe 
+                    src="https://forms.gle/uTLHjLrukADY6LS39" 
+                    width="100%" 
+                    height="900" 
+                    style="border:0; min-height: 800px; width:100%;"
+                    marginheight="0" 
+                    marginwidth="0">
+                    Loading Form...
+                </iframe>
+            </div>
+        </section>
+
+        <section id="tab-schedule" class="tab-content space-y-6">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 pb-4 border-b border-slate-200">
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900">Official Schedule & Standings</h2>
+                    <p class="text-sm text-slate-500">Live matrix for the 12-Team Model (4 Groups of 3). Tracks group positions and knockout phases.</p>
+                </div>
+                <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-md border border-emerald-200 flex items-center gap-1">
+                    <span class="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse"></span> Live Track Activated
+                </span>
+            </div>
+
+            <div class="w-full bg-white p-2 rounded-xl shadow-sm border border-slate-100 overflow-hidden">
+                <iframe 
+                    src="https://docs.google.com/spreadsheets/d/1AqidYTbPUjvk6p3cq7fk0sw_xxSMKCbSErATeEpwS3A/edit?resourcekey=&gid=0#gid=0" 
+                    width="100%" 
+                    height="650" 
+                    style="border:0; min-height: 600px; width:100%;">
+                    Loading Live Match Fixtures...
+                </iframe>
+            </div>
+        </section>
+
+        <section id="tab-rules" class="tab-content space-y-6">
+            <div class="pb-4 border-b border-slate-200">
+                <h2 class="text-2xl font-bold text-slate-900">Official Rules & Regulations</h2>
+                <p class="text-sm text-slate-500">Official framework published by the COU Sports Organizing Committee (v1.2).</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 space-y-3">
+                    <h3 class="font-bold text-slate-900 text-base flex items-center gap-2">
+                        <span class="w-1.5 h-4 bg-amber-500 rounded-sm"></span> 1. Team Composition
+                    </h3>
+                    <ul class="space-y-2 text-sm text-slate-600 list-disc list-inside">
+                        <li>Each team must strictly consist of 3 staff members: **2 Male and 1 Female player**.</li>
+                        <li>Roster substitutions are strictly prohibited unless approved in writing due to a medical emergency.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 space-y-3">
+                    <h3 class="font-bold text-slate-900 text-base flex items-center gap-2">
+                        <span class="w-1.5 h-4 bg-amber-500 rounded-sm"></span> 2. Mandatory Tie Sequence
+                    </h3>
+                    <p class="text-xs font-semibold text-slate-500">Every league match requires all 3 segments to be fully played:</p>
+                    <ol class="space-y-1.5 text-sm text-slate-600 list-decimal list-inside font-medium">
+                        <li>Game 01: Men's Doubles (Male A + Male B)</li>
+                        <li>Game 02: Mixed Match (Female + Male A or B)</li>
+                        <li>Game 03: Men's Singles (Remaining Male Player)</li>
+                    </ol>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 space-y-3">
+                    <h3 class="font-bold text-slate-900 text-base flex items-center gap-2">
+                        <span class="w-1.5 h-4 bg-amber-500 rounded-sm"></span> 3. Circular Tie-Breaker Protocol
+                    </h3>
+                    <p class="text-xs text-slate-600">If a 3-way group tie occurs (all teams finish 1-1), seeding is decided via:</p>
+                    <ol class="space-y-1 text-sm text-slate-600 list-decimal list-inside">
+                        <li>**Total Games Won** (Out of 6 total games played across group matches).</li>
+                        <li>**Net Points System** (Cumulative board margins tracked continuously).</li>
+                    </ol>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 space-y-3">
+                    <h3 class="font-bold text-rose-900 text-base flex items-center gap-2">
+                        <span class="w-1.5 h-4 bg-rose-500 rounded-sm"></span> 4. Illegal Queen Penalty
+                    </h3>
+                    <ul class="space-y-1.5 text-sm text-slate-600 list-disc list-inside">
+                        <li>Pocketing the **final piece** of the opposition before the Queen is covered yields an **immediate game forfeit**.</li>
+                        <li>Victory points for all remaining pieces on board are automatically awarded to the opposition.</li>
+                        <li>An additional **+5 point fixed bonus** is assigned to the opposition (and the violating team gets the matching negative value).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 text-xs py-6 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 text-center space-y-2">
+            <p class="font-semibold text-slate-300">Commercial Bank — Centralized Operations Unit</p>
+            <p>Official Tournament Dashboard &copy; 2026. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function switchTab(tabId) {
+            // Clear down all active classes completely
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-amber-500', 'text-slate-900', 'shadow');
+                btn.classList.add('text-slate-300', 'hover:text-white');
+            });
+
+            // Target current tab choice explicitly
+            const targetContent = document.getElementById(`tab-${tabId}`);
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+
+            const activeBtn = document.getElementById(`nav-${tabId}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('text-slate-300', 'hover:text-white');
+                activeBtn.classList.add('bg-amber-500', 'text-slate-900', 'shadow');
+            }
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
